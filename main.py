@@ -194,8 +194,8 @@ def initialize_bot():
             logger.error("GROUP_ID is missing!")
             return False
         
-        # Initialize bot with Updater (v13.7 style)
-        updater = Updater(token=BOT_TOKEN, use_context=True)
+        # FIXED: Correct way to initialize Updater with token
+        updater = Updater(BOT_TOKEN, use_context=True)
         bot = updater.bot
         
         # Add command handlers
